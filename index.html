@@ -19,8 +19,28 @@
             <i class="fa fa-lock"></i>
             <input type="password" name="password" id="password" placeholder="Enter Your Password">
         </div>
-        <button class="btn">Sign in</button>
+        <button class="btn" onclick="login()">Sign in</button>
     </div>
+    <script>
+        function login() {
+            let Email = document.getElementById('email').value;
+            let Password = document.getElementById('password').value;
+            if (Email == "" || Email == null) {
+                if (Password == "" || Password == null) {
+                    alert("email and password is compulsory")
+                }
+                else {
+                    alert("email is required");
+                }
+            }
+            else if (Password == "" || Password == null) {
+                alert("password is reuired");
+            }
+            else {
+                alert("Login successful");
+            }
+        }
+    </script>
 </body>
 
 </html>
